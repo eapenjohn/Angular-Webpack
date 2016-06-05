@@ -1,8 +1,10 @@
 'use strict';
 
-var testConfig=require('./config.test.json')
+var config={
+    "showBrowser":false
+};
 
-var webpackConfig = require('./webpack.config');
+var webpackConfig = require('./webpack.config')(config);
 
 webpackConfig.entry = {};
 

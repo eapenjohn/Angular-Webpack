@@ -1,0 +1,20 @@
+
+<div ui-view="datasetDetails">
+    <a ui-sref="root.dataset.explore.details({id:100})">Details Link</a>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th  ng-repeat="(val,key) in datasetCntrl.datasets[0]">
+                {{val}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="data in datasetCntrl.datasets">
+            <td ng-repeat="row in data"> {{row}}</td>
+            </th>
+    </tbody>
+</table>
+<div ui-view="supplierDetails"></div>

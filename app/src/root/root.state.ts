@@ -1,7 +1,6 @@
 import './modules'
 
 function config($stateProvider, $urlRouterProvider) {
-  alert('d')
   $stateProvider
     .state('root', {
       url: '',

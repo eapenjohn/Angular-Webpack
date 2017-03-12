@@ -1,12 +1,12 @@
 
 import 'angular';
 import 'angular-ui-router';
-import 'bootstrap-css'
+//import 'bootstrap-css'
 require('./contents/style.css')
 
 import './src'
 
 
-angular.bootstrap(document,['root'])
+angular.bootstrap(document, ['root'])
 
 

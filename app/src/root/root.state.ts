@@ -1,27 +1,27 @@
 import './modules'
 
-function config($stateProvider,$urlRouterProvider)
-{
+function config($stateProvider, $urlRouterProvider) {
+  alert('d')
   $stateProvider
-     .state('root', {
-        url: '',
-        template:require('./root.html'),   
-        abstract:true 
-        // controller: 'Hitachi.SmartCity.ToolBox.Controllers.DatasetController as DatasetCntrl',
-        // controllerAs: 'DatasetCntrl',   
-        // requireADLogin: false
+    .state('root', {
+      url: '',
+      template: require('./root.html'),
+      abstract: true
+      // controller: 'Hitachi.SmartCity.ToolBox.Controllers.DatasetController as DatasetCntrl',
+      // controllerAs: 'DatasetCntrl',   
+      // requireADLogin: false
     })
-    
-    
-     $urlRouterProvider.when('/','/home')
-     .otherwise('/')
+
+
+  $urlRouterProvider.when('/', '/home')
+    .otherwise('/')
 }
 
-config.$inject=['$stateProvider','$urlRouterProvider']
+config.$inject = ['$stateProvider', '$urlRouterProvider']
 
-angular.module('root',[
+angular.module('root', [
   'ui.router',
   'root.modules.home',
   'root.modules.dataset'])
-.config(config)
+  .config(config)
 

@@ -6,7 +6,7 @@
   "dependencies": {
     "angular": "^1.4.8",
     "angular-ui-router": "^0.3.0",
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^3.3.7",
     "jquery": "^2.2.4",
     "typescript": "1.7.5"
   },
@@ -38,10 +38,11 @@
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.2",
     "tsd": "^0.6.5",
-    "webpack": "^1.13.1",
+    "webpack": "^2.2.1",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
+    "dev": "webpack-dev-server --config ./webpack-dev.js",
     "test": "karma start --auto-watch --no-single-run --NODE_ENV=test"
   },
   "author": "ejohn",

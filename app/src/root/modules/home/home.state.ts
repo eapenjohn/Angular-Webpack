@@ -1,14 +1,13 @@
 
-function config($stateProvider)
-{
-     $stateProvider
+function config1($stateProvider) {
+    $stateProvider
         .state('root.home', {
-        url: '/home',
-        template: require('./home.html')
-    })
+            url: '/home',
+            template: require('./home.html')
+        })
 }
 
-config.$inject=['$stateProvider']
+config1.$inject = ['$stateProvider']
 
 angular.module('root.modules.home', [])
-.config(config)
+    .config(config1)

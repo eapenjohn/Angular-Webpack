@@ -9,5 +9,6 @@ function config1($stateProvider) {
 
 config1.$inject = ['$stateProvider']
 
+
 angular.module('root.modules.home', [])
     .config(config1)

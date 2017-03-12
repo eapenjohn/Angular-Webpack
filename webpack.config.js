@@ -2,7 +2,6 @@ var alias = require('./alias')
 var browserSync = require('browser-sync-webpack-plugin');
 var babel = require('babel-core');
 var path = require('path');
-var browserSync = require('browser-sync-webpack-plugin');
 console.log(path.resolve(__dirname, 'app'))
 var webpackConfig = function (conf) {
     var configOutput = {

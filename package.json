@@ -4,7 +4,10 @@
   "description": "a seed project with webpack + angular 1.48 + mockups + karma + jasmine ",
   "main": "y",
   "dependencies": {
-    "angular": "^1.4.8",
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8",
+    "angular-aria": "1.5.8",
+    "angular-material": "^1.1.1",
     "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.7",
     "jquery": "^2.2.4",

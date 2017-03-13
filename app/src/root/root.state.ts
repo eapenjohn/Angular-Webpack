@@ -19,6 +19,7 @@ function config($stateProvider, $urlRouterProvider) {
 config.$inject = ['$stateProvider', '$urlRouterProvider']
 
 angular.module('root', [
+  'ngMaterial',
   'ui.router',
   'root.modules.home',
   'root.modules.dataset'])

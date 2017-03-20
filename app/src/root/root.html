@@ -11,14 +11,25 @@
     </div>
 </div>-->
 
-<div layout="column" class="container">
+<div layout="column">
 
     <md-toolbar>
         <h1> Angular material starter </h1>
     </md-toolbar>
-    <md-sidenav md-is-locked-open="true">
-        side nav
-    </md-sidenav>
+    <div layout="row" class="container" layout-fill>
+        <md-sidenav class="md-whiteframe-3dp" md-is-locked-open="true">
+            <md-list>
+                <md-list-item>
+                    <md-button>
+                        <md-icon md-svg-src="svg/avatar-1.svg"></md-icon>
+                        
+          <user-avatar></user-avatar>
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
 
-    <md-content id="content"> Content </md-content>
+        <md-content id="content" flex> Content </md-content>
+    </div>
+
 </div>

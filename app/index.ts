@@ -2,7 +2,7 @@
 import 'angular';
 import 'angular-ui-router';
 //import 'bootstrap-css'
-require('./contents/style.css')
+require('./contents/style.scss')
 
 import './src'
 

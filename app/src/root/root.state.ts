@@ -1,6 +1,9 @@
 import './modules'
+import 'angular-material-icons'
+function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist(['self','https://rawgit.com/angular/material-start/es5-tutorial**'])
+  $mdIconProvider.defaultIconSet("https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatars.svg", 128)
 
-function config($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('root', {
       url: '',
@@ -16,10 +19,11 @@ function config($stateProvider, $urlRouterProvider) {
     .otherwise('/')
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider']
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$mdIconProvider','$sceDelegateProvider']
 
 angular.module('root', [
   'ngMaterial',
+  'ngMdIcons',
   'ui.router',
   'root.modules.home',
   'root.modules.dataset'])

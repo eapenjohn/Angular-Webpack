@@ -26,44 +26,48 @@ var webpackConfig = function (conf) {
         // },
         module: {
             rules: [{
-                    test: /\.css$/,
-                    use: ['style-loader', 'css-loader']
-                },
-                {
-                    test: /\.ts(x?)$/,
-                    use: 'ts-loader'
-                },
-                {
-                    test: /\.(js|jsx)$/,
-                    use: 'babel-loader'
-                }, {
-                    test: /\.html$/,
-                    exclude: /node_modules/,
-                    use: 'raw-loader'
-                },
-                {
-                    test: /\.json$/,
-                    use: 'json-loader'
-                },
-                {
-                    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    use: 'file-loader'
-                }, {
-                    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    use: 'file-loader'
-                }, {
-                    test: /\.jpg$/,
-                    exclude: /node_modules/,
-                    use: 'file-loader'
-                }, {
-                    test: /\.gif$/,
-                    exclude: /node_modules/,
-                    use: 'file-loader'
-                }, {
-                    test: /\.png$/,
-                    exclude: /node_modules/,
-                    use: 'file-loader'
-                }
+                test: /\.(sass|scss|css)$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ]
+            },
+            {
+                test: /\.ts(x?)$/,
+                use: 'ts-loader'
+            },
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader'
+            }, {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: 'raw-loader'
+            },
+            {
+                test: /\.json$/,
+                use: 'json-loader'
+            },
+            {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: 'file-loader'
+            }, {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                use: 'file-loader'
+            }, {
+                test: /\.jpg$/,
+                exclude: /node_modules/,
+                use: 'file-loader'
+            }, {
+                test: /\.gif$/,
+                exclude: /node_modules/,
+                use: 'file-loader'
+            }, {
+                test: /\.png$/,
+                exclude: /node_modules/,
+                use: 'file-loader'
+            }
             ]
         },
         // target:'node',

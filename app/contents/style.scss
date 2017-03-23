@@ -11,16 +11,13 @@
 //     background-color: green;
 // }
 
+
 md-list-item
 {
+      margin :auto;;
     button
     {
-        md-icon
-        {
-            margin : 5px 5px 5px 5px;
-            width: 128px;
-            height: 128px;
-        }
+       
     }
 }
 
@@ -28,3 +25,14 @@ md-content
 {
     margin: 20px;
 }
+
+
+ md-icon
+ {
+   width: 80px !important;
+   height: 80px !important;
+   & svg
+   {
+     border-radius: 100%;;
+   }
+ }

@@ -15,7 +15,7 @@ function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegat
     })
 
 
-  $urlRouterProvider.when('/', '/home')
+  $urlRouterProvider.when('/', '/users')
     .otherwise('/')
 }
 
@@ -25,7 +25,7 @@ angular.module('root', [
   'ngMaterial',
   'ngMdIcons',
   'ui.router',
-  'root.modules.home',
+  'root.modules.users',
   'root.modules.dataset'])
   .config(config)
 

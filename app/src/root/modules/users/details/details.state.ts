@@ -8,8 +8,8 @@ function config( $stateProvider)
 }
 
 
-config1.$inject = ['$stateProvider']
+config.$inject = ['$stateProvider']
 
 
-angular.module('root.modules.users', [])
-    .config(config1)
+angular.module('root.modules.users.details', [])
+    .config(config)

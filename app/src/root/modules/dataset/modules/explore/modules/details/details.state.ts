@@ -1,4 +1,4 @@
-function config($stateProvider: any) {
+function configDetails($stateProvider: any) {
 
     $stateProvider
         .state('root.dataset.explore.details', {
@@ -11,7 +11,7 @@ function config($stateProvider: any) {
         })
 }
 
-config.$inject = ['$stateProvider']
+configDetails.$inject = ['$stateProvider']
 
 angular.module('root.modules.dataset.modules.explore.modules.details', [])
-    .config(config)
+    .config(configDetails)

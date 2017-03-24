@@ -1,0 +1,16 @@
+    <div layout="row" class="container" layout-fill>
+        <md-sidenav class="md-whiteframe-3dp" md-is-locked-open="true">
+            <md-list>
+                <md-list-item ng-repeat="user in usersCntrl.users">
+                    <md-button aria-label="dd" ui-sref="root.users.details({id : user.id})">
+                        <md-icon flex layout-align='start stretch'  md-svg-icon="{{ user.avatar }}">{{user.description}}</md-icon>
+                        {{user.name}}
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+
+        <md-content id="content" flex> 
+          <ui-view/>
+        </md-content>
+    </div>

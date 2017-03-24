@@ -1,0 +1,38 @@
+
+/*div{
+    color: blue;
+}*/
+
+// md-sidenav {
+//     background-color: blue;
+// }
+
+// md-content {
+//     background-color: green;
+// }
+
+
+md-list-item
+{
+      margin :auto;;
+    button
+    {
+       
+    }
+}
+
+md-content 
+{
+    margin: 20px;
+}
+
+
+ md-icon
+ {
+   width: 80px !important;
+   height: 80px !important;
+   & svg
+   {
+     border-radius: 100%;;
+   }
+ }

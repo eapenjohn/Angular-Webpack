@@ -26,9 +26,6 @@ fdescribe('datasetcontroller tests', () => {
     beforeEach(angular.mock.module('root.modules.dataset.services'))
     beforeEach(inject(function ($injector) {
         datasetService=$injector.get('datsetService');
-        console.log("s");
-        console.log(datasetService);
-       
     }))
 
     fit("object created", () => {

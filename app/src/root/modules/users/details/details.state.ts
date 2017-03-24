@@ -11,5 +11,7 @@ function config( $stateProvider)
 config.$inject = ['$stateProvider']
 
 
-angular.module('root.modules.users.details', [])
+angular.module('root.modules.users.details', [
+    'root.modules.users.details.component'
+])
     .config(config)

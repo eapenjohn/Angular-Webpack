@@ -2,7 +2,7 @@ function config( $stateProvider)
 {
       $stateProvider
         .state('root.users.details', {
-            url: '/users?id',
+            url: '/users/:id',
             template: require('./details.html')
         })
 }

@@ -5,8 +5,8 @@ let detailsComponent =
 {
     bindings:{
     },
-    controller: DetailsCompntCntrl
-
+    controller: DetailsCompntCntrl,
+     template: require('./details.html')
 }
 
 

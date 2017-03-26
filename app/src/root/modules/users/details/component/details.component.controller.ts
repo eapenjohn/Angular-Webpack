@@ -1,7 +1,15 @@
 export default class DetailsCompntCntrl 
 {
-    constructor()
+    user=null;
+    constructor($stateParams,usersService)
     {
-        alert('s')
+      //  alert($stateParams.id)
+       // alert('s')
+
+       usersService.getById($stateParams.id).then((user)=>{
+        this.user=user;
+       })
     }
 }
+
+DetailsCompntCntrl.$inject=['$stateParams','usersService']

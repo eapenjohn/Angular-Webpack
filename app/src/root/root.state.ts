@@ -3,7 +3,7 @@ import 'angular-material-icons'
 function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist(['self','https://rawgit.com/angular/material-start/es5-tutorial**'])
   $mdIconProvider.defaultIconSet("https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatars.svg", 128)
-
+      .icon("share"      ,  "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/share.svg"       , 24)
   $stateProvider
     .state('root', {
       url: '',

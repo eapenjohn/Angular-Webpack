@@ -1,17 +1,20 @@
 import './modules'
 import 'angular-material-icons'
 function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegateProvider) {
-  $sceDelegateProvider.resourceUrlWhitelist(['self','https://rawgit.com/angular/material-start/es5-tutorial**'])
+  $sceDelegateProvider.resourceUrlWhitelist(['self', 'https://rawgit.com/angular/material-start/es5-tutorial**'])
   $mdIconProvider.defaultIconSet("https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatars.svg", 128)
-      .icon("share"      ,  "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/share.svg"       , 24)
+    .icon("share", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/share.svg", 24)
+    .icon("share", "assets/svg/share.svg", 24)
+    .icon("google_plus", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/google_plus.svg", 512)
+    .icon("hangouts", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/hangouts.svg", 512)
+    .icon("twitter", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/twitter.svg", 512)
+    .icon("phone", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/phone.svg", 512)
   $stateProvider
     .state('root', {
       url: '',
       template: require('./root.html'),
       abstract: true
-      // controller: 'Hitachi.SmartCity.ToolBox.Controllers.DatasetController as DatasetCntrl',
-      // controllerAs: 'DatasetCntrl',   
-      // requireADLogin: false
+
     })
 
 
@@ -19,7 +22,7 @@ function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegat
     .otherwise('/')
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider', '$mdIconProvider','$sceDelegateProvider']
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$mdIconProvider', '$sceDelegateProvider']
 
 angular.module('root', [
   'ngMaterial',

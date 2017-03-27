@@ -1,4 +1,4 @@
-import BottomSheetController from'./bottomSheet.controller'
+import BottomSheetController from './bottomSheet.controller'
 
 export default class DetailsCompntCntrl {
     user = null;
@@ -13,13 +13,18 @@ export default class DetailsCompntCntrl {
 
     }
 
-    showSheet() {
+    showSheet(selected) {
         this.$mdBottomSheet.show(
             {
-             parent: angular.element(document.querySelector('#content')),
-             template: require('./bottomSheet.html'),
-             constructor:BottomSheetController,
-               clickOutsideToClose: false
+                parent: angular.element(document.querySelector('#content')),
+                template: require('./bottomSheet.html'),
+                controller: BottomSheetController,
+                controllerAs: 'vm',
+                clickOutsideToClose: true,
+                locals: {
+                    user: this.user
+                },
+                bindToController: true,
             }
         );
     }

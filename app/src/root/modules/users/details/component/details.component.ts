@@ -3,8 +3,8 @@ import DetailsCompntCntrl from './details.component.controller'
 
 let detailsComponent =
 {
-    bindings:{
-    },
+    // bindings:{
+    // },
     controller: DetailsCompntCntrl,
      template: require('./details.html')
 }

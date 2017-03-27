@@ -1,1 +1,12 @@
-fjsdfkjsdk
+
+
+<md-bottom-sheet class="md-list md-has-header">
+   <md-subheader ng-cloak>Comment Actions {{vm.user.name}}</md-subheader>
+
+   <md-list>
+       <md-items ng-repeat="item in vm.items">
+           <md-button>
+               <md-icon md-svg-icon="{{item.icon}}"></md-icon>
+           </md-button>
+       </md-items>
+</md-bottom-sheet>

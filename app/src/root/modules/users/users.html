@@ -1,5 +1,5 @@
     <div layout="row" class="container" layout-fill>
-        <md-sidenav class="md-whiteframe-3dp" md-is-locked-open="true">
+        <md-sidenav class="md-whiteframe-3dp" md-component-id='left' md-is-locked-open="$mdMedia('gt-sm')">
             <md-list>
                 <md-list-item ng-repeat="user in usersCntrl.users">
                     <md-button aria-label="dd" ui-sref="root.users.details({id : user.id})">

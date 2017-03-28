@@ -1,21 +1,7 @@
-<!--<div class="container">
-    <div class="row">
-        <div class="col-md-3">left menu
-            <Span>
-    <a ui-sref='root.home'>Home </a>
-</Span>
-        </div>
-        <div class="col-md-7">Main content
-            <ui-view></ui-view>
-        </div>
-    </div>
-</div>-->
-
-<div layout="column">
-
-    <md-toolbar>
-        <h1> Angular material starter </h1>
-    </md-toolbar>
-
-    <ui-view/>
-</div>
+<md-toolbar layout="row" layout-align="space-between">
+    <md-button ng-click="rootCntrl.toggle()" hide-gt-sm>
+        <md-icon md-svg-icon="menu" />
+    </md-button>
+    <h1 flex> Angular material starter </h1>
+</md-toolbar>
+<ui-view/>

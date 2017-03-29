@@ -3,7 +3,7 @@ import 'angular-material-icons'
 
 import RootController from './root.controller'
 
-function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegateProvider) {
+function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegateProvider, $locationProvider) {
   $sceDelegateProvider.resourceUrlWhitelist(['self', 'https://rawgit.com/angular/material-start/es5-tutorial**'])
   $mdIconProvider.defaultIconSet("https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/avatars.svg", 128)
     .icon("share", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/share.svg", 24)
@@ -12,6 +12,8 @@ function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegat
     .icon("hangouts", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/hangouts.svg", 512)
     .icon("twitter", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/twitter.svg", 512)
     .icon("phone", "https://rawgit.com/angular/material-start/es5-tutorial/app/assets/svg/phone.svg", 512)
+
+  
 
   $stateProvider
     .state('root', {
@@ -26,9 +28,11 @@ function config($stateProvider, $urlRouterProvider, $mdIconProvider, $sceDelegat
 
   $urlRouterProvider.when('/', '/users')
     .otherwise('/')
+
+      $locationProvider.html5Mode(true);
 }
 
-config.$inject = ['$stateProvider', '$urlRouterProvider', '$mdIconProvider', '$sceDelegateProvider']
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$mdIconProvider', '$sceDelegateProvider', '$locationProvider']
 
 angular.module('root', [
   'ngMaterial',

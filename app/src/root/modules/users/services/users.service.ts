@@ -36,7 +36,7 @@ export default class UsersService
     getById(id)
     {
      let defer= this.$q.defer();
-      defer.resolve(this.users.find((item) => item.id == id))
+      defer.resolve(this.users.filter((item) => item.id == id)[0])
       return defer.promise;
     }
 }
